@@ -1,6 +1,4 @@
 import './css/style.css';
-
-import './charts/ChartjsConfig';
 import { Route, Routes } from 'react-router-dom';
 import Login from './Login';
 import ProtectedRoute from './pages/admin/ProtectedRoute';
