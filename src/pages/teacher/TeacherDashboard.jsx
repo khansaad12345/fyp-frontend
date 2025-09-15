@@ -3,7 +3,7 @@ import {  Route, Routes } from 'react-router-dom'
 import PageNotFound from '../admin/PageNotFound'
 import TakeAttendance from './TakeAttendance'
 import Sidebar from "../../components/teacher/layout/Sidebar";
-import Header from '../../components/student/layout/Header'
+import Header from '../../components/teacher/layout/Header'
 import Overview from '../../components/teacher/cards/OverView'
 import Footer from '../admin/Footer'
 import Logout from './Logout'

@@ -38,6 +38,8 @@ const Overview = () => {
   });
   const user = JSON.parse(localStorage.getItem("user")); // Get stored user info
   const teacherId = user && user.role === "teacher" ? user._id : null;
+  const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
+
 console.log(teacherId)
   useEffect(() => {
     const fetchData = async () => {
