@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion"; // Import motion
 import DashboardCard02 from "./DashboardCard02";
 import StatisticsDashboard from "../../../pages/admin/StatisticsDashboard";
+    
 
 const StatisticCard = ({ title, count, color, icon }) => (
   <motion.div
@@ -37,15 +38,16 @@ const Overview = () => {
     students: null,
     courses: null,
   });
+  const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const [classRes, courseRes, studentRes, teacherRes] = await Promise.all([
-          axios.get("${API_BASE_URL}/api/class"),
-          axios.get("${API_BASE_URL}/api/courses"),
-          axios.get("${API_BASE_URL}/api/auth/students"),
-          axios.get("${API_BASE_URL}/api/auth/teachers"),
+          axios.get(`${API_BASE_URL}/api/class`),
+          axios.get(`${API_BASE_URL}/api/courses`),
+          axios.get(`${API_BASE_URL}/api/auth/students`),
+          axios.get(`${API_BASE_URL}/api/auth/teachers`),
         ]);
         setData({
           classes: classRes.data.totalClasses,
